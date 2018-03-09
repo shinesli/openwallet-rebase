@@ -23,7 +23,7 @@ namespace xmreg
 // initialize static variables
 atomic<uint64_t>        CurrentBlockchainStatus::current_height{0};
 string                  CurrentBlockchainStatus::blockchain_path{"/home/mwo/.blockchain/lmdb"};
-string                  CurrentBlockchainStatus::deamon_url{"http:://127.0.0.1:18081"};
+string                  CurrentBlockchainStatus::deamon_url{"http:://127.0.0.1:11888"};
 bool                    CurrentBlockchainStatus::testnet{false};
 bool                    CurrentBlockchainStatus::do_not_relay{false};
 bool                    CurrentBlockchainStatus::is_running{false};
@@ -34,7 +34,7 @@ uint64_t                CurrentBlockchainStatus::search_thread_life_in_seconds {
 vector<pair<uint64_t, transaction>> CurrentBlockchainStatus::mempool_txs;
 string                  CurrentBlockchainStatus::import_payment_address_str;
 string                  CurrentBlockchainStatus::import_payment_viewkey_str;
-uint64_t                CurrentBlockchainStatus::import_fee {10000000000}; // 0.01 xmr
+uint64_t                CurrentBlockchainStatus::import_fee {10000000}; // 0.01 xmr
 account_public_address  CurrentBlockchainStatus::import_payment_address;
 secret_key              CurrentBlockchainStatus::import_payment_viewkey;
 map<string, unique_ptr<TxSearch>> CurrentBlockchainStatus::searching_threads;
@@ -179,7 +179,7 @@ CurrentBlockchainStatus::is_tx_spendtime_unlocked(
         // XXX: this needs to be fast, so we'd need to get the starting heights
         // from the daemon to be correct once voting kicks in
 
-        uint64_t v2height = testnet ? 624634 : 1009827;
+        uint64_t v2height = testnet ? 624634 : 592000;
 
         uint64_t leeway = block_height < v2height
                           ? CRYPTONOTE_LOCKED_TX_ALLOWED_DELTA_SECONDS_V1
