@@ -1,8 +1,8 @@
 {
   "daemon-url" :
   {
-    "mainnet" : "http://127.0.0.1:18081",
-    "testnet" : "http://127.0.0.1:28081"
+    "mainnet" : "http://127.0.0.1:11888",
+    "testnet" : "http://127.0.0.1:21188"
   },
   "blockchain-path" :
   {
