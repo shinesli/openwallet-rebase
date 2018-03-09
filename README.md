@@ -1,4 +1,4 @@
-# Open Monero - a fully open sourced implementation of MyMonero backend
+# Openwallet-rebase - a fully open sourced implementation of Mywallet backend
 
 In this example [restbed](https://github.com/Corvusoft/restbed/) is used to
 demonstrate how to provide Monero related JSON REST service. For this purpose, 
