@@ -80,7 +80,7 @@ parse_str_address(const string& address_str,
                   bool testnet)
 {
 
-    if (!get_account_address_from_str(address, testnet, address_str))
+    if (!get_account_address_as_str(address, testnet, address_str))
     {
         cerr << "Error getting address: " << address_str << endl;
         return false;
