@@ -75,7 +75,7 @@ OutputInputIdentification::identify_outputs()
 
         derive_public_key(derivation,
                           output_idx_in_tx,
-                          address_info->m_spend_public_key,
+                          address_info->address.m_spend_public_key,
                           generated_tx_pubkey);
 
         // check if generated public key matches the current output's key
