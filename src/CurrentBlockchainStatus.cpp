@@ -23,7 +23,7 @@ namespace xmreg
 // initialize static variables
 atomic<uint64_t>        CurrentBlockchainStatus::current_height{0};
 string                  CurrentBlockchainStatus::blockchain_path{"/home/liyudong1/.bitaureum/lmdb"};
-string                  CurrentBlockchainStatus::deamon_url{"http:://127.0.0.1:11888"};
+string                  CurrentBlockchainStatus::deamon_url{"http:://127.0.0.1:38081"};
 bool                    CurrentBlockchainStatus::testnet{false};
 bool                    CurrentBlockchainStatus::do_not_relay{false};
 bool                    CurrentBlockchainStatus::is_running{false};
