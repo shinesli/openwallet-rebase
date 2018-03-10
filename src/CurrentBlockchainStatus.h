@@ -9,6 +9,7 @@
 
 #include "MicroCore.h"
 #include "ssqlses.h"
+#include "version.h.in"
 
 #include <iostream>
 #include <memory>
