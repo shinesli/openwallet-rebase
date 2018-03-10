@@ -968,7 +968,7 @@ decrypt(const std::string &ciphertext,
 
     }
 
-    crypto::chacha(ciphertext.data() + sizeof(iv),
+    crypto::chacha20(ciphertext.data() + sizeof(iv),
                     ciphertext.size() - prefix_size,
                     key, iv, &plaintext[0]);
 
