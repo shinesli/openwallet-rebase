@@ -96,7 +96,7 @@ parse_str_address(const string& address_str,
 string
 print_address(const address_parse_info& address_info, bool testnet)
 {
-    return "<" + get_account_address_as_str(testnet, address) + ">";
+    return "<" + get_account_address_as_str(testnet, address_info.is_subaddress, address_info.address) + ">";
 }
 
 string
