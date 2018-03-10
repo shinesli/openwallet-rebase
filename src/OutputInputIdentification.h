@@ -7,6 +7,8 @@
 
 #include "CurrentBlockchainStatus.h"
 #include "tools.h"
+#include "monero_headers.h"
+#include "TxSearch.h"
 
 namespace xmreg
 {
