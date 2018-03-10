@@ -44,8 +44,8 @@ thinwalletCtrls.controller("LoginCtrl", function($scope, $location, AccountServi
         $scope.mnemonic = "teeming boil darted behind ashtray simplest hornet buying last lukewarm testing mocked lending younger medicate sawmill flippant aside victim hive goodbye linen testing arena testing";
     } else {
         $scope.decode = false;
-        $scope.address = "44AFFq5kSiGBoZ4NMDwYtN18obc8AemS33DBLWs3H7otXft3XjrpDtQGv7SqSsaBYBb98uNbr2VBBEt7f2wfn3RVGQBEP3A";
-        $scope.view_key = "f359631075708155cc3d92a32b75a7d02a5dcf27756707b47a2b31b21c389501" ;
+        $scope.address = "aureMVgjTAojfBDCJJZ64AfrcATZmRZGyRmqCzZNk6FLQqobkKXeR3xPDKTCGzxy4wJe19baWgCQ49aicG1MkVgw2yXpAGm1tY";
+        $scope.view_key = "fd55f463abd8980d24e7b9091079120206042258b022735c7ff1ef37236dd30a" ;
     }
 
 
