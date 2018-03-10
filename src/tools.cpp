@@ -76,11 +76,11 @@ get_tx_pub_key_from_str_hash(Blockchain& core_storage, const string& hash_str, t
  */
 bool 
 parse_str_address(const string& address_str,
-                  account_public_address& address,
+                  address_parse_info& address_info,
                   bool testnet)
 {
 
-    if (!get_account_address_from_str(address, testnet, address_str))
+    if (!get_account_address_from_str(address_info, testnet, address_str))
     {
         cerr << "Error getting address: " << address_str << endl;
         return false;
@@ -94,7 +94,7 @@ parse_str_address(const string& address_str,
  * Return string representation of monero address
  */
 string
-print_address(const account_public_address& address, bool testnet)
+print_address(const address_parse_info& address_info, bool testnet)
 {
     return "<" + get_account_address_as_str(testnet, address) + ">";
 }
@@ -183,9 +183,9 @@ timestamp_to_str_local(time_t timestamp, const char* format)
 
 
 ostream&
-operator<< (ostream& os, const account_public_address& addr)
+operator<< (ostream& os, const address_parse_info& addr_info)
 {
-    os << get_account_address_as_str(false, addr);
+    os << get_account_address_as_str(false, addr_info.is_subaddress, addr_info.address);
     return os;
 }
 
