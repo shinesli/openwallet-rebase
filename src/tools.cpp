@@ -932,7 +932,7 @@ decrypt(const std::string &ciphertext,
         bool authenticated)
 {
 
-    const size_t prefix_size = sizeof(chacha8_iv)
+    const size_t prefix_size = sizeof(chacha_iv)
                                + (authenticated ? sizeof(crypto::signature) : 0);
     if (ciphertext.size() < prefix_size)
     {
@@ -940,10 +940,10 @@ decrypt(const std::string &ciphertext,
         return {};
     }
 
-    crypto::chacha8_key key;
-    crypto::generate_chacha8_key(&skey, sizeof(skey), key);
+    crypto::chacha_key key;
+    crypto::generate_chacha_key(&skey, sizeof(skey), key);
 
-    const crypto::chacha8_iv &iv = *(const crypto::chacha8_iv*)&ciphertext[0];
+    const crypto::chacha_iv &iv = *(const crypto::chacha_iv*)&ciphertext[0];
 
     std::string plaintext;
 
@@ -968,7 +968,7 @@ decrypt(const std::string &ciphertext,
 
     }
 
-    crypto::chacha8(ciphertext.data() + sizeof(iv),
+    crypto::chacha(ciphertext.data() + sizeof(iv),
                     ciphertext.size() - prefix_size,
                     key, iv, &plaintext[0]);
 
