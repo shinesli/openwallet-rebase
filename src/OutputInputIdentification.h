@@ -7,8 +7,6 @@
 
 #include "CurrentBlockchainStatus.h"
 #include "tools.h"
-#include "monero_headers.h"
-#include "TxSearch.h"
 
 namespace xmreg
 {
@@ -133,7 +131,7 @@ public:
 private:
 
     // address and viewkey for this search thread.
-    const address_parse_info* address;
+    const address_parse_info* address_info;
     const secret_key* viewkey;
 
     // transaction that is beeing search
