@@ -13,7 +13,7 @@ if(CMAKE_SIZEOF_VOID_P EQUAL "4")
 endif()
 
 if (NOT MONERO_DIR)
-    set(MONERO_DIR ~/rebase-mini)
+    set(MONERO_DIR ~/monero)
 endif()
 
 message(STATUS MONERO_DIR ": ${MONERO_DIR}")
