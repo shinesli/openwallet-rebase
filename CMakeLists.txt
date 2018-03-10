@@ -110,6 +110,7 @@ set(LIBRARIES
         mysqlpp
         mysqlclient
         readline
+		checkpoints
         easylogging
         ${Boost_LIBRARIES}
         pthread
