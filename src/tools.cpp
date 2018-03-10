@@ -74,13 +74,13 @@ get_tx_pub_key_from_str_hash(Blockchain& core_storage, const string& hash_str, t
  * Parse monero address in a string form into
  * cryptonote::account_public_address object
  */
-bool
+bool 
 parse_str_address(const string& address_str,
                   account_public_address& address,
                   bool testnet)
 {
 
-    if (!get_account_address_as_str(address, testnet, address_str))
+    if (!get_account_address_from_str(address, testnet, address_str))
     {
         cerr << "Error getting address: " << address_str << endl;
         return false;
