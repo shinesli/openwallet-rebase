@@ -10,8 +10,8 @@ var config = {
     openAliasPrefix: "ars",
     coinName: 'Aureus',
     coinUriPrefix: 'aureus:',
-    addressPrefix: 49f4a,
-    integratedAddressPrefix: 1fdd4a,
+    addressPrefix: 0x49f4a,
+    integratedAddressPrefix: 0x1fdd4a,
     addressPrefixTestnet: 0xc526,
     integratedAddressPrefixTestnet: 0x3cdd25,
     feePerKB: new JSBigInt('2000000000'),//20^10 - for testnet its not used, as fee is dynamic.
